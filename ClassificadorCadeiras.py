@@ -17,6 +17,16 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 import seaborn as sns
 import numpy as np
+import zipfile
+
+"""================ Importações ================"""
+zip_file_path = 'dataset.zip'
+extract_path = './dataset'
+
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_path)
+
+print(f"{zip_file_path} extraído para {extract_path}")
 
 """================ Definições ================"""
 data_dir = 'dataset'
